@@ -4,7 +4,7 @@ const Header = () => {
     return (
         <nav className="w-full flex items-center px-4 gap-4 shadow">
             <Link to="/">
-                <img src="logo192.png" className='h-12' alt='Logo'/>
+                <img src="logo.jpg" className='h-12' alt='Logo'/>
             </Link>
             <div className="flex p-4 gap-4">
                 <Link to="/planes">
