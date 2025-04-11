@@ -1,25 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Dashboard from "./pages/Dashboard/Dashboard";
+import {Route, Routes} from "react-router-dom";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import FlightConditions from "./pages/FlightConditions/FlightConditions";
+import History from "./pages/History/History";
+import Planes from "./pages/Planes/Planes";
+import Clients from "./pages/Clients/Clients";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="h-screen w-screen flex flex-col">
+            <Header/>
+            <Routes>
+                <Route path="/" element={<Dashboard />} />
+                <Route path="/planes" element={<Planes />} />
+                <Route path="/history" element={<History />} />
+                <Route path="/flight-conditions" element={<FlightConditions />} />
+                <Route path="/clients" element={<Clients />} />
+            </Routes>
+            <Footer/>
+      </div>
   );
 }
 
