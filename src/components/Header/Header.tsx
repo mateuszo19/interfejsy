@@ -1,27 +1,49 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
     return (
         <nav className="w-full flex items-center px-4 gap-4 shadow">
-            <Link to="/">
-                <img src="logo.jpg" className='h-12' alt='Logo'/>
-            </Link>
-            <div className="flex p-4 gap-4">
-                <Link to="/planes">
-                    <button type="button" className="btn btn-outline-success">Samoloty</button>
-                </Link>
-                <Link to="/history">
-                    <button type="button" className="btn btn-outline-success">Historia</button>
-                </Link>
-                <Link to="/flight-conditions">
-                    <button type="button" className="btn btn-outline-success">Warunki lotu</button>
-                </Link>
-                <Link to="/clients">
-                    <button type="button" className="btn btn-outline-success">Klienci</button>
-                </Link>
+            <NavLink to="/">
+                <img src="logo.jpg" className="h-12" alt="Logo" />
+            </NavLink>
+            <div className="flex px-4 pt-4 gap-4">
+                <ul className="nav nav-tabs">
+                    <li className="nav-item">
+                        <NavLink
+                            to="/planes"
+                            className={({ isActive }) => `nav-link text-black ${isActive ? "active" : ""}`}
+                        >
+                            Samoloty
+                        </NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink
+                            to="/history"
+                            className={({ isActive }) => `nav-link text-black ${isActive ? "active" : ""}`}
+                        >
+                            Historia
+                        </NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink
+                            to="/flight-conditions"
+                            className={({ isActive }) => `nav-link text-black ${isActive ? "active" : ""}`}
+                        >
+                            Warunki lotu
+                        </NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink
+                            to="/clients"
+                            className={({ isActive }) => `nav-link text-black ${isActive ? "active" : ""}`}
+                        >
+                            Klienci
+                        </NavLink>
+                    </li>
+                </ul>
             </div>
         </nav>
-    )
+    );
 };
 
 export default Header;

@@ -1,0 +1,1 @@
+export type PlaneStatusType = 'rented' | 'free' | 'service' | 'damaged';

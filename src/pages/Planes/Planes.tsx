@@ -1,9 +1,24 @@
 import { planes } from "../../data/planes";
+import {PlaneStatusType} from "../../type/planeStatus.type";
 
 const Planes = () => {
+
+    const getPlaneStatus = (status: PlaneStatusType) => {
+        switch (status) {
+            case "free":
+                return <span className="badge text-bg-success">Dostępny</span>;
+            case "rented":
+                return <span className="badge text-bg-secondary">Wynajęty</span>;
+            case "service":
+                return <span className="badge text-bg-warning">Serwis</span>;
+            case "damaged":
+                return <span className="badge text-bg-danger">Uszkodzony</span>;
+        }
+    }
+
     return (
-        <section className="grow p-2">
-            <div className="w-full h-full p-3 shadow rounded-2xl">
+        <section className="grow p-2 bg-gray-200">
+            <div className="w-full h-full p-3 bg-white shadow rounded-2xl">
                 <h1 className="font-bold mb-2">Samoloty</h1>
 
                 {/* Kontener z ustaloną wysokością i przewijaniem */}
@@ -15,7 +30,7 @@ const Planes = () => {
                             <th scope="col">Producent</th>
                             <th scope="col">Model</th>
                             <th scope="col">Numer boczny</th>
-                            <th scope="col"></th>
+                            <th scope="col">Status</th>
                             <th scope="col">Rocznik</th>
                             <th scope="col">Lotnisko</th>
                             <th scope="col">Przebieg [Wh]</th>
@@ -29,7 +44,7 @@ const Planes = () => {
                                 <td>{plane.manufacturer}</td>
                                 <td>{plane.model}</td>
                                 <td>{plane.registerNumber}</td>
-                                <td></td>
+                                <td>{getPlaneStatus(plane.status)}</td>
                                 <td>{plane.yeaOfProduction}</td>
                                 <td>{plane.actualAirport}</td>
                                 <td>{plane.mileage}</td>
