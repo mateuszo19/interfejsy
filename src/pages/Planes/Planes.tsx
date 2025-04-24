@@ -54,10 +54,14 @@ const Planes = () => {
                         </tbody>
                     </table>
                 </div>
-                <div className='p-4'>
+                <div className='flex flex-row gap-4 p-4'>
                     <div className="w-40 h-40 p-4 items-center rounded-xl shadow flex flex-col justify-between">
                         <span className='text-5xl'>{planes.length}</span>
                         <span className='text-center font-bold'>Liczba samolotów</span>
+                    </div>
+                    <div className="w-40 h-40 p-4 items-center rounded-xl shadow flex flex-col justify-between">
+                        <span className='text-5xl text-red-500 font-bold'>{planes.filter((plane) => plane.status === 'damaged').length}</span>
+                        <span className='text-center font-bold'>Liczna uszkodzonych samolotów</span>
                     </div>
                 </div>
             </div>

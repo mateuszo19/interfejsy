@@ -7,7 +7,7 @@ import FlightConditions from "./pages/FlightConditions/FlightConditions";
 import History from "./pages/History/History";
 import Planes from "./pages/Planes/Planes";
 import Clients from "./pages/Clients/Clients";
-
+//TODO dodac baze danych
 function App() {
   return (
       <div className="h-screen w-screen flex flex-col">

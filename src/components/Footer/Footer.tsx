@@ -12,7 +12,7 @@ const Footer = () => {
                             <img src="logo.jpg" className="h-12 rounded-full shadow" alt="Logo" />
                         </NavLink>
                     </div>
-                    <div className="flex flex-col gap-2 items-start">
+                    <div className="flex flex-row items-center gap-2 items-start">
                         {
                             links.map((link, index) => (
                                     <NavLink
