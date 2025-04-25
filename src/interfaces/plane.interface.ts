@@ -7,7 +7,7 @@ export interface Plane {
     status: PlaneStatusType;
     registerNumber: string;
     yeaOfProduction: number;
-    actualAirport: string;
+    actualAirportId: number;
     mileage: number;
     pricePerHour: number;
 }

@@ -1,4 +1,4 @@
-import {LinkInterface} from "../../interfaces/link.interface";
+import {LinkInterface} from "../interfaces/link.interface";
 
 const links: LinkInterface[] = [
     {
@@ -16,6 +16,10 @@ const links: LinkInterface[] = [
     {
         label: "Klienci",
         url: "/clients",
+    },
+    {
+        label: "Lotniska",
+        url: "/airports",
     },
 ];
 

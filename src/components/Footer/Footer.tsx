@@ -1,5 +1,5 @@
 import {NavLink} from "react-router-dom";
-import links from "../const/links";
+import links from "../../const/links";
 
 const Footer = () => {
 

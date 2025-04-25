@@ -1,5 +1,7 @@
 import { planes } from "../../data/planes";
 import {PlaneStatusType} from "../../type/planeStatus.type";
+import getAirportNameById from "../../util/db/getAirportNameById";
+import getAirportCodeById from "../../util/db/getAirportCodeById";
 
 const Planes = () => {
 
@@ -46,7 +48,7 @@ const Planes = () => {
                                 <td>{plane.registerNumber}</td>
                                 <td>{getPlaneStatus(plane.status)}</td>
                                 <td>{plane.yeaOfProduction}</td>
-                                <td>{plane.actualAirport}</td>
+                                <td data-bs-toggle="tooltip" data-bs-placement="top" title= {getAirportNameById(plane.actualAirportId)}>{getAirportCodeById(plane.actualAirportId)}</td>
                                 <td>{plane.mileage}</td>
                                 <td>{plane.pricePerHour}</td>
                             </tr>
