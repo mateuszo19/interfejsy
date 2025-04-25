@@ -3,8 +3,8 @@ import {ClientInterface} from "../interfaces/client.interface";
 export const clients: ClientInterface[] = [
     {
         id: 1,
-        first_name: "Jan",
-        last_name: "Kowalski",
+        firstName: "Jan",
+        lastName: "Kowalski",
         email: "jan.kowalski@example.com",
         idNumber: "PL1234567890",
         pilotLicence: {
@@ -17,8 +17,8 @@ export const clients: ClientInterface[] = [
     },
     {
         id: 2,
-        first_name: "Anna",
-        last_name: "Nowak",
+        firstName: "Anna",
+        lastName: "Nowak",
         email: "anna.nowak@example.com",
         idNumber: "PL9876543210",
         pilotLicence: {
@@ -31,8 +31,8 @@ export const clients: ClientInterface[] = [
     },
     {
         id: 3,
-        first_name: "Peter",
-        last_name: "Schmidt",
+        firstName: "Peter",
+        lastName: "Schmidt",
         email: "peter.schmidt@example.de",
         idNumber: "DE123456789",
         pilotLicence: {
@@ -45,8 +45,8 @@ export const clients: ClientInterface[] = [
     },
     {
         id: 4,
-        first_name: "Sophie",
-        last_name: "Müller",
+        firstName: "Sophie",
+        lastName: "Müller",
         email: "sophie.mueller@example.de",
         idNumber: "DE987654321",
         pilotLicence: {
@@ -59,8 +59,8 @@ export const clients: ClientInterface[] = [
     },
     {
         id: 5,
-        first_name: "Carlos",
-        last_name: "García",
+        firstName: "Carlos",
+        lastName: "García",
         email: "carlos.garcia@example.es",
         idNumber: "ES234567891",
         pilotLicence: {
@@ -73,8 +73,8 @@ export const clients: ClientInterface[] = [
     },
     {
         id: 6,
-        first_name: "Lucia",
-        last_name: "Martínez",
+        firstName: "Lucia",
+        lastName: "Martínez",
         email: "lucia.martinez@example.es",
         idNumber: "ES345678912",
         pilotLicence: {
@@ -87,8 +87,8 @@ export const clients: ClientInterface[] = [
     },
     {
         id: 7,
-        first_name: "John",
-        last_name: "Smith",
+        firstName: "John",
+        lastName: "Smith",
         email: "john.smith@example.co.uk",
         idNumber: "UK123456789",
         pilotLicence: {
@@ -101,8 +101,8 @@ export const clients: ClientInterface[] = [
     },
     {
         id: 8,
-        first_name: "Emily",
-        last_name: "Brown",
+        firstName: "Emily",
+        lastName: "Brown",
         email: "emily.brown@example.co.uk",
         idNumber: "UK987654321",
         pilotLicence: {
@@ -115,8 +115,8 @@ export const clients: ClientInterface[] = [
     },
     {
         id: 9,
-        first_name: "Tomasz",
-        last_name: "Zieliński",
+        firstName: "Tomasz",
+        lastName: "Zieliński",
         email: "t.zielinski@example.com",
         idNumber: "PL1122334455",
         pilotLicence: {
@@ -129,8 +129,8 @@ export const clients: ClientInterface[] = [
     },
     {
         id: 10,
-        first_name: "Katarzyna",
-        last_name: "Wiśniewska",
+        firstName: "Katarzyna",
+        lastName: "Wiśniewska",
         email: "k.wisniewska@example.com",
         idNumber: "PL6677889900",
         pilotLicence: {
@@ -143,8 +143,8 @@ export const clients: ClientInterface[] = [
     },
     {
         id: 11,
-        first_name: "Andreas",
-        last_name: "Keller",
+        firstName: "Andreas",
+        lastName: "Keller",
         email: "a.keller@example.de",
         idNumber: "DE567890123",
         pilotLicence: {
@@ -157,8 +157,8 @@ export const clients: ClientInterface[] = [
     },
     {
         id: 12,
-        first_name: "María",
-        last_name: "López",
+        firstName: "María",
+        lastName: "López",
         email: "m.lopez@example.es",
         idNumber: "ES098765432",
         pilotLicence: {
@@ -171,8 +171,8 @@ export const clients: ClientInterface[] = [
     },
     {
         id: 13,
-        first_name: "Oliver",
-        last_name: "Taylor",
+        firstName: "Oliver",
+        lastName: "Taylor",
         email: "o.taylor@example.co.uk",
         idNumber: "UK111222333",
         pilotLicence: {
@@ -185,8 +185,8 @@ export const clients: ClientInterface[] = [
     },
     {
         id: 14,
-        first_name: "Barbara",
-        last_name: "Maj",
+        firstName: "Barbara",
+        lastName: "Maj",
         email: "b.maj@example.com",
         idNumber: "PL9988776655",
         pilotLicence: {
@@ -199,8 +199,8 @@ export const clients: ClientInterface[] = [
     },
     {
         id: 15,
-        first_name: "Jakub",
-        last_name: "Sikora",
+        firstName: "Jakub",
+        lastName: "Sikora",
         email: "jakub.sikora@example.com",
         idNumber: "PL4455667788",
         pilotLicence: {

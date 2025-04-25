@@ -1,9 +1,8 @@
 import {AvailableNationality} from "../type/nationality.type";
 
-export interface ClientInterface {
-    id: number
-    first_name: string;
-    last_name: string;
+export interface NewClientInterface {
+    firstName: string;
+    lastName: string;
     email: string;
     idNumber: string;
     pilotLicence: {
@@ -19,4 +18,8 @@ export interface ClientInterface {
     };
     dateOfBirth: Date;
     nationality: AvailableNationality;
+}
+
+export interface ClientInterface extends NewClientInterface{
+    id: number
 }

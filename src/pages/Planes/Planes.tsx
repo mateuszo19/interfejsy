@@ -2,27 +2,32 @@ import { planes } from "../../data/planes";
 import {PlaneStatusType} from "../../type/planeStatus.type";
 import getAirportNameById from "../../util/db/getAirportNameById";
 import getAirportCodeById from "../../util/db/getAirportCodeById";
+import {Badge, Button} from "react-bootstrap";
 
 const Planes = () => {
 
     const getPlaneStatus = (status: PlaneStatusType) => {
         switch (status) {
             case "free":
-                return <span className="badge text-bg-success">Dostępny</span>;
+                return <Badge bg="success">Dostępny</Badge>;
             case "rented":
-                return <span className="badge text-bg-secondary">Wynajęty</span>;
+                return <Badge bg="secondary">New</Badge>;
             case "service":
-                return <span className="badge text-bg-warning">Serwis</span>;
+                return <Badge bg="warning">New</Badge>;
             case "damaged":
-                return <span className="badge text-bg-danger">Uszkodzony</span>;
+                return <Badge bg="danger">New</Badge>;
         }
     }
 
     return (
         <section className="grow p-2 bg-gray-200">
-            <div className="w-full h-full p-3 bg-white shadow rounded-2xl">
-                <h1 className="font-bold mb-2">Samoloty</h1>
-
+            <div className="flex flex-col gap-2 w-full h-full p-3 bg-white shadow rounded-2xl">
+                <div className='flex justify-between'>
+                    <h1 className="font-bold mb-2">Samoloty</h1>
+                    <div className='flex items-center'>
+                        <Button variant="outline-success">Dodaj</Button>
+                    </div>
+                </div>
                 {/* Kontener z ustaloną wysokością i przewijaniem */}
                 <div className="max-h-[500px] overflow-y-auto rounded-md border">
                     <table className="table w-full text-sm text-left">
