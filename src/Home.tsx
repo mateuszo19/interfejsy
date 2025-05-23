@@ -15,32 +15,38 @@ function Home() {
         {
             url: "/",
             element: <LandingPage/>,
-            showHeader: false
+            showHeader: false,
+            showFooter: false,
         },
         {
             url: "/dashboard",
             element: <Dashboard/>,
-            showHeader: true
+            showHeader: true,
+            showFooter: true,
         },
         {
             url: "/planes",
             element: <Planes/>,
-            showHeader: true
+            showHeader: true,
+            showFooter: true,
         },
         {
             url: "/history",
             element: <History/>,
-            showHeader: true
+            showHeader: true,
+            showFooter: true,
         },
         {
             url: "/flight-conditions",
             element: <FlightConditions/>,
-            showHeader: true
+            showHeader: true,
+            showFooter: true,
         },
         {
             url: "/clients",
             element: <Clients/>,
-            showHeader: true
+            showHeader: true,
+            showFooter: true,
         }
     ]
 
@@ -54,7 +60,7 @@ function Home() {
                     <Route path={page.url} element={page.element} key={index} />
                 ))}
             </Routes>
-            <Footer/>
+          {currentPage?.showFooter &&  <Footer/>}
       </div>
   );
 }
