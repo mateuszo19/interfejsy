@@ -1,54 +1,18 @@
 import { Plane } from "../interfaces/plane.interface";
 
-export const planes: Plane[] = [
-    { id: 1, manufacturer: "Piper", model: "Cherooke", status: "free", registerNumber: "SP-BD", yeaOfProduction: 2019, actualAirportId: 0, mileage: 311, pricePerHour: 9766 },
-    { id: 2, manufacturer: "Cessna", model: "172 Skyhawk", status: "service", registerNumber: "SP-CG", yeaOfProduction: 2007, actualAirportId: 0, mileage: 834, pricePerHour: 4885 },
-    { id: 3, manufacturer: "Beechcraft", model: "Bonanza", status: "free", registerNumber: "SP-DJ", yeaOfProduction: 2001, actualAirportId: 1, mileage: 1419, pricePerHour: 9361 },
-    { id: 4, manufacturer: "Diamond", model: "DA40", status: "damaged", registerNumber: "SP-EM", yeaOfProduction: 2002, actualAirportId: 0, mileage: 1679, pricePerHour: 6780 },
-    { id: 5, manufacturer: "Bombardier", model: "Challenger 350", status: "service", registerNumber: "SP-FP", yeaOfProduction: 2006, actualAirportId: 2, mileage: 387, pricePerHour: 5607 },
-    { id: 6, manufacturer: "Boeing", model: "737-800", status: "damaged", registerNumber: "SP-GS", yeaOfProduction: 1985, actualAirportId: 2, mileage: 1904, pricePerHour: 7977 },
-    { id: 7, manufacturer: "Robin", model: "DR400", status: "rented", registerNumber: "SP-HV", yeaOfProduction: 1996, actualAirportId: 0, mileage: 1533, pricePerHour: 7742 },
-    { id: 8, manufacturer: "Mooney", model: "M20", status: "rented", registerNumber: "SP-IY", yeaOfProduction: 1999, actualAirportId: 0, mileage: 346, pricePerHour: 2102 },
-    { id: 9, manufacturer: "Cirrus", model: "SR22", status: "free", registerNumber: "SP-JB", yeaOfProduction: 1997, actualAirportId: 1, mileage: 775, pricePerHour: 6717 },
-    { id: 10, manufacturer: "Embraer", model: "Phenom 300", status: "rented", registerNumber: "SP-KD", yeaOfProduction: 1996, actualAirportId: 3, mileage: 1940, pricePerHour: 2505 },
-    { id: 11, manufacturer: "Airbus", model: "A320", status: "damaged", registerNumber: "SP-LE", yeaOfProduction: 2003, actualAirportId: 4, mileage: 1406, pricePerHour: 5562 },
-    { id: 12, manufacturer: "Zlin", model: "Z-242", status: "damaged", registerNumber: "SP-MG", yeaOfProduction: 1987, actualAirportId: 0, mileage: 1460, pricePerHour: 5245 },
-    { id: 13, manufacturer: "Gulfstream", model: "G650", status: "rented", registerNumber: "SP-NI", yeaOfProduction: 1981, actualAirportId: 4, mileage: 1811, pricePerHour: 5364 },
-    { id: 14, manufacturer: "Dassault", model: "Falcon 7X", status: "damaged", registerNumber: "SP-OK", yeaOfProduction: 2000, actualAirportId: 5, mileage: 924, pricePerHour: 1406 },
-    { id: 15, manufacturer: "Pilatus", model: "PC-12", status: "free", registerNumber: "SP-PM", yeaOfProduction: 2015, actualAirportId: 1, mileage: 471, pricePerHour: 1941 },
-    { id: 16, manufacturer: "Piper", model: "Cherooke", status: "service", registerNumber: "SP-QR", yeaOfProduction: 1995, actualAirportId: 3, mileage: 526, pricePerHour: 3525 },
-    { id: 17, manufacturer: "Cessna", model: "172 Skyhawk", status: "free", registerNumber: "SP-SU", yeaOfProduction: 1997, actualAirportId: 0, mileage: 357, pricePerHour: 2105 },
-    { id: 18, manufacturer: "Beechcraft", model: "Bonanza", status: "damaged", registerNumber: "SP-TV", yeaOfProduction: 1987, actualAirportId: 0, mileage: 1291, pricePerHour: 4973 },
-    { id: 19, manufacturer: "Diamond", model: "DA40", status: "service", registerNumber: "SP-UW", yeaOfProduction: 2016, actualAirportId: 0, mileage: 1045, pricePerHour: 3725 },
-    { id: 20, manufacturer: "Bombardier", model: "Challenger 350", status: "rented", registerNumber: "SP-VX", yeaOfProduction: 2004, actualAirportId: 6, mileage: 1445, pricePerHour: 4087 },
-    { id: 21, manufacturer: "Boeing", model: "737-800", status: "damaged", registerNumber: "SP-WY", yeaOfProduction: 1991, actualAirportId: 2, mileage: 1421, pricePerHour: 7063 },
-    { id: 22, manufacturer: "Robin", model: "DR400", status: "service", registerNumber: "SP-XZ", yeaOfProduction: 1984, actualAirportId: 3, mileage: 1174, pricePerHour: 2421 },
-    { id: 23, manufacturer: "Mooney", model: "M20", status: "damaged", registerNumber: "SP-YA", yeaOfProduction: 2016, actualAirportId: 0, mileage: 1734, pricePerHour: 6286 },
-    { id: 24, manufacturer: "Cirrus", model: "SR22", status: "damaged", registerNumber: "SP-ZB", yeaOfProduction: 1991, actualAirportId: 5, mileage: 1410, pricePerHour: 8236 },
-    { id: 25, manufacturer: "Embraer", model: "Phenom 300", status: "rented", registerNumber: "SP-AC", yeaOfProduction: 2016, actualAirportId: 1, mileage: 1742, pricePerHour: 6305 },
-    { id: 26, manufacturer: "Airbus", model: "A320", status: "free", registerNumber: "SP-BD2", yeaOfProduction: 1993, actualAirportId: 0, mileage: 601, pricePerHour: 9517 },
-    { id: 27, manufacturer: "Zlin", model: "Z-242", status: "damaged", registerNumber: "SP-CE", yeaOfProduction: 2013, actualAirportId: 1, mileage: 1260, pricePerHour: 4723 },
-    { id: 28, manufacturer: "Gulfstream", model: "G650", status: "free", registerNumber: "SP-DF", yeaOfProduction: 2004, actualAirportId: 5, mileage: 1421, pricePerHour: 7729 },
-    { id: 29, manufacturer: "Dassault", model: "Falcon 7X", status: "rented", registerNumber: "SP-EG", yeaOfProduction: 1986, actualAirportId: 6, mileage: 1324, pricePerHour: 9736 },
-    { id: 30, manufacturer: "Pilatus", model: "PC-12", status: "rented", registerNumber: "SP-FH", yeaOfProduction: 2019, actualAirportId: 0, mileage: 1462, pricePerHour: 9004 },
-    { id: 31, manufacturer: "Cessna", model: "Citation X", status: "free", registerNumber: "SP-GG", yeaOfProduction: 2000, actualAirportId: 7, mileage: 1430, pricePerHour: 8100 },
-    { id: 32, manufacturer: "Boeing", model: "737 MAX", status: "service", registerNumber: "SP-HH", yeaOfProduction: 2020, actualAirportId: 4, mileage: 980, pricePerHour: 12500 },
-    { id: 33, manufacturer: "Airbus", model: "A321", status: "rented", registerNumber: "SP-II", yeaOfProduction: 2018, actualAirportId: 8, mileage: 2050, pricePerHour: 10200 },
-    { id: 34, manufacturer: "Embraer", model: "Legacy 650", status: "free", registerNumber: "SP-JJ", yeaOfProduction: 2012, actualAirportId: 3, mileage: 1800, pricePerHour: 7200 },
-    { id: 35, manufacturer: "Pilatus", model: "PC-24", status: "rented", registerNumber: "SP-KK", yeaOfProduction: 2017, actualAirportId: 9, mileage: 900, pricePerHour: 9500 },
-    { id: 36, manufacturer: "Diamond", model: "DA42", status: "service", registerNumber: "SP-LL", yeaOfProduction: 2015, actualAirportId: 0, mileage: 1340, pricePerHour: 6200 },
-    { id: 37, manufacturer: "Mooney", model: "Acclaim", status: "damaged", registerNumber: "SP-MM", yeaOfProduction: 2010, actualAirportId: 1, mileage: 1275, pricePerHour: 5900 },
-    { id: 38, manufacturer: "Robin", model: "DR500", status: "rented", registerNumber: "SP-NN", yeaOfProduction: 2014, actualAirportId: 5, mileage: 950, pricePerHour: 5100 },
-    { id: 39, manufacturer: "Beechcraft", model: "King Air 350", status: "free", registerNumber: "SP-OO", yeaOfProduction: 2005, actualAirportId: 6, mileage: 1535, pricePerHour: 8800 },
-    { id: 40, manufacturer: "Zlin", model: "Z-142", status: "service", registerNumber: "SP-PP", yeaOfProduction: 2003, actualAirportId: 0, mileage: 1030, pricePerHour: 3100 },
-    { id: 41, manufacturer: "Gulfstream", model: "G500", status: "damaged", registerNumber: "SP-QQ", yeaOfProduction: 2019, actualAirportId: 10, mileage: 1780, pricePerHour: 12000 },
-    { id: 42, manufacturer: "Bombardier", model: "Global 6000", status: "rented", registerNumber: "SP-RR", yeaOfProduction: 2020, actualAirportId: 11, mileage: 1120, pricePerHour: 13500 },
-    { id: 43, manufacturer: "Cessna", model: "182 Skylane", status: "free", registerNumber: "SP-SS", yeaOfProduction: 1995, actualAirportId: 5, mileage: 875, pricePerHour: 4800 },
-    { id: 44, manufacturer: "Cirrus", model: "SR20", status: "damaged", registerNumber: "SP-TT", yeaOfProduction: 2008, actualAirportId: 2, mileage: 940, pricePerHour: 6300 },
-    { id: 45, manufacturer: "Embraer", model: "Phenom 100", status: "rented", registerNumber: "SP-UU", yeaOfProduction: 2011, actualAirportId: 6, mileage: 1105, pricePerHour: 6700 },
-    { id: 46, manufacturer: "Piper", model: "PA-28 Warrior", status: "service", registerNumber: "SP-VV", yeaOfProduction: 2006, actualAirportId: 0, mileage: 1165, pricePerHour: 4500 },
-    { id: 47, manufacturer: "Beechcraft", model: "Baron G58", status: "rented", registerNumber: "SP-WW", yeaOfProduction: 2013, actualAirportId: 3, mileage: 1240, pricePerHour: 6900 },
-    { id: 48, manufacturer: "Mooney", model: "Ovation", status: "damaged", registerNumber: "SP-XX", yeaOfProduction: 2004, actualAirportId: 1, mileage: 1380, pricePerHour: 5600 },
-    { id: 49, manufacturer: "Cessna", model: "SkyCourier", status: "free", registerNumber: "SP-YY", yeaOfProduction: 2022, actualAirportId: 4, mileage: 600, pricePerHour: 8400 },
-    { id: 50, manufacturer: "Airbus", model: "A319", status: "rented", registerNumber: "SP-ZZ", yeaOfProduction: 2015, actualAirportId: 5, mileage: 1320, pricePerHour: 8800 }
+const planes: Plane[] = [
+    {
+        url: "jet1.jpg",
+        name: 'Pilatus PC-12'
+    },
+    {
+        url: "jet2.jpg",
+        name: 'Cessna Citiation'
+    },
+    {
+        url: "jet3.jpg",
+        name: 'Piper Sierra'
+    }
 ];
+
+export default planes;

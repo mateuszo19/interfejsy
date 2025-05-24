@@ -1,22 +1,14 @@
 import { Button, Form } from "react-bootstrap";
+import planes from "../../data/planes";
 
 const LandingPage = () => {
-    return (
-        <section className="LandingPage font-sans flex flex-col gap-40 text-gray-800 bg-gradient-to-b from-sky-50 to-white scroll-smooth">
-            <div className="shadow-md bg-white w-full">
-                <div className="flex justify-between items-center py-6 px-6 md:px-20 max-w-[1440px] m-auto">
-                    <div className="flex items-center gap-2">
-                        <img src="/logo.jpg" alt="Samolot" className="h-10 w-10" />
-                        <h1 className="text-2xl md:text-4xl font-bold text-blue-700">Avio REVO</h1>
-                    </div>
-                    <Button variant="primary">Przejdź do serwisu</Button>
-                </div>
-            </div>
 
-            <div className="flex flex-col-reverse md:flex-row items-center gap-12 px-6 md:px-20 max-w-[1440px] m-auto">
-                <div className="md:basis-1/2 text-center md:text-left">
-                    <h2 className="text-4xl md:text-6xl font-bold mb-6">Twój punkt odlotu</h2>
-                    <p className="text-lg md:text-xl text-gray-600 mb-6">
+    return (
+        <section className="LandingPage font-sans flex flex-col gap-40  bg-[#0F172A]  text-gray-800 scroll-smooth">
+            <div className="flex flex-col-reverse md:flex-row items-center gap-12 py-40 md:px-20 max-w-[1440px] m-auto">
+                <div className="md:basis-1/2 text-left md:text-left">
+                    <h2 className="text-4xl md:text-9xl font-bold text-white mb-6">Twój <br/> punkt <br/> odlotu</h2>
+                    <p className="text-lg md:text-xl text-white mb-6">
                         Wynajmij luksusowy samolot na wyciągnięcie ręki – szybko, bezpiecznie, wygodnie.
                     </p>
                     <Button variant="success">Zarezerwuj teraz</Button>
@@ -30,8 +22,8 @@ const LandingPage = () => {
                 </div>
             </div>
 
-            <div className="px-6 md:px-20 py-16 bg-white text-center">
-                <h3 className="text-3xl md:text-4xl font-bold mb-10">Jak to działa?</h3>
+            <div className="px-6 md:px-20 py-16 bg-[#0F172A] text-center">
+                <h3 className="text-3xl md:text-7xl text-white font-bold mb-10">Jak to działa?</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     {[
                         {
@@ -50,21 +42,21 @@ const LandingPage = () => {
                             desc: "Pojaw się na lotnisku i ciesz się komfortowym lotem.",
                         },
                     ].map((step, i) => (
-                        <div key={i} className="bg-blue-50 p-6 rounded-xl shadow-md hover:shadow-lg transition">
-                            <div className="text-5xl mb-4">{step.icon}</div>
-                            <h4 className="text-xl font-bold mb-2">{step.title}</h4>
-                            <p className="text-gray-600">{step.desc}</p>
+                        <div key={i} className="border border-[#CA8A04] p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                            <div className="text-5xl mb-4 text-white">{step.icon}</div>
+                            <h4 className="text-xl font-bold mb-2 text-white">{step.title}</h4>
+                            <p className="text-gray-600 text-white">{step.desc}</p>
                         </div>
                     ))}
                 </div>
             </div>
 
-            <div className="bg-white px-6 md:px-20 py-16 text-center">
+            <div className="px-6 md:px-20 py-16 bg-[#0F172A] text-center">
                 <div className="max-w-[1440px] m-auto">
-                    <h3 className="text-3xl md:text-4xl font-bold mb-6">Zaufali nam</h3>
+                    <h3 className="text-3xl md:text-7xl text-white font-bold mb-6">Zaufali nam</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-center max-w-6xl mx-auto">
                         {["LOT", "Lufthansa", "Emirates", "Qatar Airways"].map((partner, i) => (
-                            <div key={i} className="text-xl font-semibold text-blue-700">{partner}</div>
+                            <div key={i} className="text-2xl font-semibold text-[#CA8A04]">{partner}</div>
                         ))}
                     </div>
 
@@ -74,9 +66,9 @@ const LandingPage = () => {
                             { number: "24/7", label: "Dostępność i wsparcie" },
                             { number: "99.9%", label: "Zadowolonych klientów" },
                         ].map((item, i) => (
-                            <div key={i}>
-                                <div className="text-4xl font-bold text-blue-600">{item.number}</div>
-                                <p className="text-gray-700">{item.label}</p>
+                            <div key={i} className='flex flex-col gap-2'>
+                                <div className="text-7xl font-bold text-[#CA8A04]">{item.number}</div>
+                                <p className="text-white font-semibold">{item.label}</p>
                             </div>
                         ))}
                     </div>
@@ -84,7 +76,7 @@ const LandingPage = () => {
             </div>
 
             <div className="px-6 md:px-20 max-w-[1440px] m-auto">
-                <h3 className="text-3xl md:text-4xl font-semibold mb-10 text-center">Nasze Usługi</h3>
+                <h3 className="text-3xl md:text-7xl text-center text-white font-bold mb-6">Nasze Usługi</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {[
                         {
@@ -102,16 +94,15 @@ const LandingPage = () => {
                     ].map((card, index) => (
                         <div
                             key={index}
-                            className="bg-white p-6 rounded-2xl shadow hover:shadow-xl hover:-translate-y-1 transition-transform duration-300"
+                            className="border-2 border-[#CA8A04]  p-6 rounded-2xl shadow hover:shadow-xl hover:-translate-y-1 transition-transform duration-300"
                         >
-                            <h4 className="text-2xl font-bold mb-3">{card.title}</h4>
-                            <p className="text-gray-600">{card.desc}</p>
+                            <h4 className="text-2xl text-white font-bold mb-3">{card.title}</h4>
+                            <p className="text-white">{card.desc}</p>
                         </div>
                     ))}
                 </div>
             </div>
 
-            {/* Kim jesteśmy */}
             <div className="px-6 md:px-20 py-16 bg-gray-50 text-center">
                 <div className="max-w-[1440px] m-auto">
                     <h3 className="text-3xl md:text-4xl font-bold mb-10">Kim jesteśmy?</h3>
@@ -145,15 +136,22 @@ const LandingPage = () => {
 
             {/* Flota */}
             <div className="px-6 md:px-20 py-16 max-w-[1440px] m-auto">
-                <h3 className="text-3xl md:text-4xl font-semibold mb-10 text-center">Nasza flota</h3>
+                <h3 className="text-3xl md:text-7xl text-center text-white font-bold mb-6">Nasza flota</h3>
                 <div className="flex gap-6 overflow-x-auto no-scrollbar py-4">
-                    {["jet1.jpg", "jet2.jpg", "jet3.jpg"].map((img, idx) => (
-                        <img
+                    {planes.map((plane, idx) => (
+                        <div
                             key={idx}
-                            src={`/images/${img}`}
-                            alt={`Samolot ${idx + 1}`}
-                            className="w-80 sm:w-96 object-cover rounded-lg shadow-md flex-shrink-0"
-                        />
+                            className="relative w-80 sm:w-96 h-64 flex-shrink-0 group rounded-lg overflow-hidden"
+                        >
+                            <img
+                                src={`/images/${plane.url}`}
+                                alt={plane.name}
+                                className="object-cover w-full h-full"
+                            />
+                            <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                                <span className="text-white text-xl font-semibold text-center">{plane.name}</span>
+                            </div>
+                        </div>
                     ))}
                 </div>
             </div>
@@ -182,30 +180,41 @@ const LandingPage = () => {
                 </div>
             </div>
 
-            {/* Formularz */}
-            <div className="px-6 md:px-20 py-16 bg-white">
+            <div className="px-6 md:px-20 py-16 bg-[#0F172A] text-white">
                 <h3 className="text-3xl md:text-4xl font-bold mb-6 text-center">Skontaktuj się z nami</h3>
                 <Form className="max-w-2xl mx-auto grid grid-cols-1 gap-4">
                     <Form.Group>
-                        <Form.Label>Imię i nazwisko</Form.Label>
-                        <Form.Control type="text" placeholder="Jan Kowalski" />
+                        <Form.Label className="text-white">Imię i nazwisko</Form.Label>
+                        <Form.Control
+                            type="text"
+                            placeholder="Jan Kowalski"
+                            className="bg-[#1E293B] border border-gray-600 text-white"
+                        />
                     </Form.Group>
                     <Form.Group>
-                        <Form.Label>Email</Form.Label>
-                        <Form.Control type="email" placeholder="jan@example.com" />
+                        <Form.Label className="text-white">Email</Form.Label>
+                        <Form.Control
+                            type="email"
+                            placeholder="jan@example.com"
+                            className="bg-[#1E293B] border border-gray-600 text-white"
+                        />
                     </Form.Group>
                     <Form.Group>
-                        <Form.Label>Wiadomość</Form.Label>
-                        <Form.Control as="textarea" rows={4} placeholder="Napisz do nas..." />
+                        <Form.Label className="text-white">Wiadomość</Form.Label>
+                        <Form.Control
+                            as="textarea"
+                            rows={4}
+                            placeholder="Napisz do nas..."
+                            className="bg-[#1E293B] border border-gray-600 text-white"
+                        />
                     </Form.Group>
-                    <Button variant="primary" className="mt-2">Wyślij wiadomość</Button>
+                    <Button
+                        className="mt-4 bg-[#CA8A04] border-0 hover:bg-yellow-600"
+                    >
+                        Wyślij wiadomość
+                    </Button>
                 </Form>
             </div>
-
-            {/* Footer */}
-            <footer className="bg-gray-900 text-white py-6 text-center text-sm">
-                © {new Date().getFullYear()} Avio REVO – Wszystkie prawa zastrzeżone.
-            </footer>
         </section>
     );
 };

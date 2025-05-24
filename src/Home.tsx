@@ -1,66 +1,47 @@
 import React from 'react';
-import Dashboard from "./pages/Dashboard/Dashboard";
-import {Route, Routes, useLocation} from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import FlightConditions from "./pages/FlightConditions/FlightConditions";
-import History from "./pages/History/History";
-import Planes from "./pages/Planes/Planes";
-import Clients from "./pages/Clients/Clients";
 import LandingPage from "./pages/LandingPage/LandingPage";
-function Home() {
-    const location = useLocation();
+import {PageInterface} from "./interfaces/link.interface";
+import Locations from "./pages/Locations/Locations";
 
-    const pages = [
+function Home() {
+
+    const pages: PageInterface[] = [
         {
             url: "/",
+            title: "Strona główka",
+            highlighted: false,
             element: <LandingPage/>,
-            showHeader: false,
-            showFooter: false,
         },
         {
-            url: "/dashboard",
-            element: <Dashboard/>,
-            showHeader: true,
-            showFooter: true,
+            url: "/maps",
+            title: "Gdzie jesteśmy?",
+            highlighted: false,
+            element: <Locations/>,
         },
         {
-            url: "/planes",
-            element: <Planes/>,
-            showHeader: true,
-            showFooter: true,
-        },
-        {
-            url: "/history",
-            element: <History/>,
-            showHeader: true,
-            showFooter: true,
-        },
-        {
-            url: "/flight-conditions",
-            element: <FlightConditions/>,
-            showHeader: true,
-            showFooter: true,
-        },
-        {
-            url: "/clients",
-            element: <Clients/>,
-            showHeader: true,
-            showFooter: true,
+            url: "/maps",
+            title: "Umów lot",
+            highlighted: true,
+            element: <Locations/>,
         }
     ]
 
-    const currentPage = pages.find(page => page.url === location.pathname);
-
   return (
-      <div className="h-screen w-screen flex flex-col">
-          {currentPage?.showHeader && <Header />}
+      <div className="h-screen w-screen flex flex-col bg-[#0F172A] ">
+            <Header links={pages.map(page => ({
+                url: page.url,
+                title: page.title,
+                highlighted: page.highlighted,
+            }))}/>
             <Routes>
                 {pages.map((page, index) => (
                     <Route path={page.url} element={page.element} key={index} />
                 ))}
             </Routes>
-          {currentPage?.showFooter &&  <Footer/>}
+            <Footer/>
       </div>
   );
 }
