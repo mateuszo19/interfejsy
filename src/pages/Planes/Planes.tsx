@@ -1,23 +1,10 @@
 import { planes } from "../../data/planes";
-import {PlaneStatusType} from "../../type/planeStatus.type";
 import getAirportNameById from "../../util/db/getAirportNameById";
 import getAirportCodeById from "../../util/db/getAirportCodeById";
-import {Badge, Button} from "react-bootstrap";
+import {Button} from "react-bootstrap";
+import PlaneStatus from "../../components/PlaneStatus/PlaneStatus";
 
 const Planes = () => {
-
-    const getPlaneStatus = (status: PlaneStatusType) => {
-        switch (status) {
-            case "free":
-                return <Badge bg="success">Dostępny</Badge>;
-            case "rented":
-                return <Badge bg="secondary">New</Badge>;
-            case "service":
-                return <Badge bg="warning">New</Badge>;
-            case "damaged":
-                return <Badge bg="danger">New</Badge>;
-        }
-    }
 
     return (
         <section className="grow p-2 bg-gray-200">
@@ -51,7 +38,7 @@ const Planes = () => {
                                 <td>{plane.manufacturer}</td>
                                 <td>{plane.model}</td>
                                 <td>{plane.registerNumber}</td>
-                                <td>{getPlaneStatus(plane.status)}</td>
+                                <td><PlaneStatus status={plane.status}/></td>
                                 <td>{plane.yeaOfProduction}</td>
                                 <td data-bs-toggle="tooltip" data-bs-placement="top" title= {getAirportNameById(plane.actualAirportId)}>{getAirportCodeById(plane.actualAirportId)}</td>
                                 <td>{plane.mileage}</td>

@@ -63,7 +63,7 @@ const Clients = () => {
     ];
 
     return (
-        <section className="grow p-2 bg-gray-200">
+        <section className="Clients grow p-2 bg-gray-200">
             <div className="flex flex-col gap-2 w-full h-full p-3 bg-white shadow rounded-2xl">
                 <div className='flex justify-between'>
                     <h1 className="font-bold mb-2">Klienci</h1>
