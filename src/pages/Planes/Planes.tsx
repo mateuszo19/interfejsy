@@ -15,7 +15,6 @@ const Planes = () => {
                         <Button variant="outline-success">Dodaj</Button>
                     </div>
                 </div>
-                {/* Kontener z ustaloną wysokością i przewijaniem */}
                 <div className="max-h-[500px] overflow-y-auto rounded-md border">
                     <table className="table w-full text-sm text-left">
                         <thead className="sticky top-0 bg-white z-10">
