@@ -1,1 +1,0 @@
-export type AvailableNationality = 'Polska' | 'Niemcy' | 'Hiszpania' | 'Wielka Brytania';

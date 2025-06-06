@@ -2,11 +2,8 @@ import 'leaflet/dist/leaflet.css';
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import L from 'leaflet';
 
-// Fix ikonki Leaflet (ważne, jeśli nie widać markera!)
 import 'leaflet/dist/images/marker-icon.png';
 import 'leaflet/dist/images/marker-shadow.png';
-import {airports} from "../../data/airports";
-import getNumberOfPlanesByAirportId from "../../util/db/getNumberOfPlanesByAirportId";
 
 delete (L.Icon.Default.prototype as any)._getIconUrl;
 L.Icon.Default.mergeOptions({
@@ -26,19 +23,19 @@ const MapComponent = () => {
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            {airports.map((airport) => (
-                <Marker position={[airport.coordinates.lat,airport.coordinates.lng]}>
-                    <Popup>
-                        {airport.code}
-                        <br/>
-                        {airport.name}
-                        <br/>
-                        <div className='m-auto w-10 h-10 rounded-full border flex flex-row items-center font-bold text-xl justify-center'>
-                            {getNumberOfPlanesByAirportId(airport.id)}
-                        </div>
-                    </Popup>
-                </Marker>
-            ))}
+            {/*{airports.map((airport) => (*/}
+            {/*    <Marker position={[airport.coordinates.lat,airport.coordinates.lng]}>*/}
+            {/*        <Popup>*/}
+            {/*            {airport.code}*/}
+            {/*            <br/>*/}
+            {/*            {airport.name}*/}
+            {/*            <br/>*/}
+            {/*            <div className='m-auto w-10 h-10 rounded-full border flex flex-row items-center font-bold text-xl justify-center'>*/}
+            {/*                {getNumberOfPlanesByAirportId(airport.id)}*/}
+            {/*            </div>*/}
+            {/*        </Popup>*/}
+            {/*    </Marker>*/}
+            {/*))}*/}
         </MapContainer>
     );
 };
