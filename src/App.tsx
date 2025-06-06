@@ -7,6 +7,7 @@ import FlightConditions from "./pages/FlightConditions/FlightConditions";
 import History from "./pages/History/History";
 import Planes from "./pages/Planes/Planes";
 import Clients from "./pages/Clients/Clients";
+import Airports from "./pages/Airports/Airports";
 //TODO dodac baze danych
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
                 <Route path="/history" element={<History />} />
                 <Route path="/flight-conditions" element={<FlightConditions />} />
                 <Route path="/clients" element={<Clients />} />
+                <Route path="/airports" element={<Airports />} />
             </Routes>
             <Footer/>
       </div>
