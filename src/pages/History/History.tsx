@@ -8,6 +8,7 @@ import getPlaneNameById from "../../util/db/getPlaneNameById";
 import getPlaneRegistrationByPlaneId from "../../util/db/getPlaneRegistrationByPlaneId";
 import getClientNameById from "../../util/db/getClientNameById";
 import getClientNationalityById from "../../util/db/getClientNationalityById";
+import FlightsMap from "../../components/FlightHistoryMap/FlightHistoryMap";
 
 const History = () => {
 
@@ -41,7 +42,10 @@ const History = () => {
                         <h1 className="fw-bold mb-1">Historia lotów</h1>
                     </div>
                 </div>
-                <div className="max-h-[500px] overflow-y-auto rounded-md border">
+                <div className="h-[400px] w-full">
+                    <FlightsMap flights={flightsHistory} airports={airports} />
+                </div>
+                <div className="overflow-y-auto rounded-md border">
                     <table className="table w-full text-sm text-left">
                         <thead className="align-middle text-center">
                         <tr>
