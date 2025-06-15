@@ -14,6 +14,9 @@
 
 Aplikacja w ekranie "Warunki lotu" pobieraza pomocą api ```geocoding-api``` dane pogodowe dla każdego lotniska na którym znajduje się akualnie samolot. Mamy również pole do samodzielnego wyszukania pogody.
 
+### Mapa leaflet
+
+Aplikacja wykorzystuje mapy Leaflet.
 ---
 
 ## 📁 Struktura komponentów
