@@ -1,46 +1,75 @@
-# Getting Started with Create React App
+# ✈️ Aircraft Club Manager
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Aircraft Club Manager** to kompleksowa aplikacja do zarządzania flotą lotniczą, klientami i operacjami lotniczymi. Projekt został zaprojektowany z myślą o małych i średnich aeroklubach, szkołach lotniczych i prywatnych właścicielach floty. Aplikacja upraszcza codzienne obowiązki administracyjne i pozwala skupić się na tym, co najważniejsze — lataniu.
 
-## Available Scripts
+## 🌟 Główne funkcje
 
-In the project directory, you can run:
+- **Zarządzanie lotniskami** – Przeglądaj i zarządzaj listą obsługiwanych lotnisk.
+- **Ewidencja klientów** – Przechowuj informacje o klientach, ich licencjach i uprawnieniach.
+- **Zarządzanie flotą** – Rejestruj i aktualizuj stan samolotów (w tym usterki).
+- **Warunki lotu** – Pobieraj w czasie rzeczywistym dane pogodowe dla każdego lotniska.
+- **Historia lotów** – Śledź wypożyczenia i aktywności związane z flotą.
 
-### `npm start`
+### Api pogodowe
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Aplikacja w ekranie "Warunki lotu" pobieraza pomocą api ```geocoding-api``` dane pogodowe dla każdego lotniska na którym znajduje się akualnie samolot. Mamy również pole do samodzielnego wyszukania pogody.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## 📁 Struktura komponentów
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `Airports.tsx`
+Wyświetla **listę dostępnych lotnisk**, na których stacjonują samoloty. Każde lotnisko posiada unikalny kod ICAO, nazwę oraz współrzędne geograficzne. Może służyć jako punkt odniesienia dla warunków pogodowych i historii wypożyczeń.
 
-### `npm run build`
+### `Clients.tsx`
+Sekcja poświęcona **klientom** – rejestrowanym użytkownikom aplikacji, którzy mogą wypożyczać samoloty. Zawiera formularz do dodawania nowych klientów z informacjami takimi jak:
+- dane osobowe,
+- numer dowodu,
+- licencja pilota (z krajem wydania),
+- szczegółowe uprawnienia (PPL, CPL, IR, ATPL, NVFR),
+- narodowość.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `Planes.tsx`
+Moduł do zarządzania **samolotami** znajdującymi się we flocie. Pozwala na:
+- przeglądanie dostępnych samolotów,
+- kontrolowanie ich statusu (np. „sprawny”, „uszkodzony”),
+- przypisanie samolotu do konkretnego lotniska.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `FlightConditions.tsx`
+Pobiera i wyświetla **aktualne warunki pogodowe** dla wszystkich dostępnych lotnisk. Wykorzystuje zewnętrzne API pogodowe, aby dostarczyć:
+- temperaturę,
+- ciśnienie,
+- prędkość i kierunek wiatru,
+- warunki wizualne (np. „słonecznie”, „zachmurzenie”).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `History.tsx`
+Panel przedstawiający **historię wypożyczeń samolotów**. Zawiera informacje o:
+- użytkownikach, którzy wypożyczyli dany samolot,
+- czasie i dacie wypożyczenia,
+- miejscu odlotu i przylotu.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 💡 Dlaczego ten projekt?
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Aplikacja powstała z myślą o realnych potrzebach aeroklubów i właścicieli floty samolotów lekkich. Wiele organizacji korzysta z przestarzałych arkuszy kalkulacyjnych lub ręcznych rejestrów — Aircraft Club Manager to krok w stronę cyfrowej i efektywnej przyszłości.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 🛠️ Technologie
 
-## Learn More
+- **React + TypeScript** – interfejs użytkownika
+- **React-Bootstrap / Tailwind CSS** – estetyczny i responsywny design
+- **Next.js** – SSR i routing
+- **Axios** – obsługa żądań HTTP
+- **OpenWeather API (lub inne)** – integracja z pogodą
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🚀 Uruchomienie lokalne
+
+```bash
+git clone https://github.com/mateuszo19/interfejsy.git
+cd interfejsy
+npm install
+npm run dev
